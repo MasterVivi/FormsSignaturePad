@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             mc:Ignorable="d"
+             x:Class="Signature.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" Spacing="0" Padding="0">
+
+        <BoxView x:Name="SafeViewTop"
+                 HeightRequest="20"
+                 BackgroundColor="#CEE3F6"
+                 IsVisible="false" />
+        <controls:SignaturePadView x:Name="signature"
+                                   StrokeColor="Black"
+                                   StrokeWidth="2"
+                                   CaptionText="Signature Above"
+                                   CaptionTextColor="Blue"
+                                   CaptionFontSize="14"
+                                   PromptText="John Paul Costello"
+                                   PromptTextColor="Blue"
+                                   PromptFontSize="14"
+                                   BackgroundColor="#CEE3F6"
+                                   VerticalOptions="FillAndExpand" />
+        <Image x:Name="result"
+               HorizontalOptions="FillAndExpand"
+               BackgroundColor="White"
+               HeightRequest="100" />
+        <Button Text="Save" BackgroundColor="Orange" TextColor="White" Clicked="SaveButton_Clicked" />
+        <BoxView x:Name="SafeViewBottom"
+                 HeightRequest="20"
+                 BackgroundColor="#CEE3F6"
+                 IsVisible="false" />
+
+    </StackLayout>
+</ContentPage>
